@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<?import javax.swing.table.TableColumn?>
+<VBox spacing="10" alignment="TOP_CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="DatosController">
+    <children>
+        <TableView fx:id="tableDatos" prefHeight="200" prefWidth="600">
+            <columns>
+                <TableColumn fx:id="colCodigo" text="Codigo"/>
+                <TableColumn fx:id="colNombre" text="Nombre"/>
+                <TableColumn fx:id="colApellido" text="Apellido"/>
+                <TableColumn fx:id="colDepartamento" text="Departamento"/>
+                <TableColumn fx:id="colFechaNacimiento" text="Fecha de Nacimiento"/>
+            </columns>
+        </TableView>
+
+        <TextField fx:id="txtNombre" promptText="Nombre"/>
+        <TextField fx:id="txtApellido" promptText="Apellido"/>
+        <TextField fx:id="txtDepartamento" promptText="Departamento"/>
+        <DatePicker fx:id="datePickerFechaNacimiento"/>
+
+        <HBox spacing="10" alignment="CENTER">
+            <Button text="Agregar" onMouseClicked="#agregar"/>
+            <Button text="Actualizar" onMouseClicked="#actualizar"/>
+            <Button text="Eliminar" onMouseClicked="#eliminar"/>
+        </HBox>
+    </children>
+</VBox>
